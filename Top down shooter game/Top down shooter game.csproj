@@ -302,6 +302,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet2D.cs" />
     <Compile Include="Assets\Scripts\BulletHit2D.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
     <Compile Include="Assets\Scripts\ShootBullet.cs" />
