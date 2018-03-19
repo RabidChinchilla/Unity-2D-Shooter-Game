@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d16158fd321a8a143b6a18e9591feac4
+  - enabled: 1
+    path: Assets/Scenes/Zombie Shooter Level 1.unity
+    guid: 2308887c0351a674faa5b3ae78689e1c

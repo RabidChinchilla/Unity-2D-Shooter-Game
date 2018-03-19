@@ -6,6 +6,7 @@ public class MoveTowardsObject : MonoBehaviour {
 
     public Transform target;
     public float speed = 4.0f;
+
     void FixedUpdate()
     {
         if (target != null)
@@ -17,5 +18,6 @@ public class MoveTowardsObject : MonoBehaviour {
             }
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * 0.01f);
         }
-    }
+    }
+
 }
