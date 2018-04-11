@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - guard
   layers:
   - Default
   - TransparentFX
@@ -44,11 +45,20 @@ TagManager:
   - name: Level
     uniqueID: 3269294137
     locked: 0
+  - name: extra environment
+    uniqueID: 3258625699
+    locked: 0
   - name: obstacles
     uniqueID: 2039047895
     locked: 0
   - name: Pick ups
     uniqueID: 327842419
+    locked: 0
+  - name: Bullets
+    uniqueID: 2688678935
+    locked: 0
+  - name: enemies
+    uniqueID: 46034117
     locked: 0
   - name: Player
     uniqueID: 1070999577
