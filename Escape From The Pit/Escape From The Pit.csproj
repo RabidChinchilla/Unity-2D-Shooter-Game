@@ -414,13 +414,17 @@
     <Compile Include="Assets\Scripts\AddScore.cs" />
     <Compile Include="Assets\Scripts\Bullet2D.cs" />
     <Compile Include="Assets\Scripts\BulletHit2D.cs" />
+    <Compile Include="Assets\Scripts\DamagePlayer.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\GuardBehaviour.cs" />
+    <Compile Include="Assets\Scripts\KeyPickUp.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />
+    <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\ShootBullet.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
     <Compile Include="Assets\Scripts\SmoothLookAtTarget.cs" />

@@ -6,7 +6,6 @@ public class ZombieBehaviour : MonoBehaviour {
 
     public int health = 10;
     public int damage = 2;
-
     public GameObject explosionPrefab;
     public float adjustExplosionAngle = 0.0f;
 
