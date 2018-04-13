@@ -419,6 +419,7 @@
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\GuardBehaviour.cs" />
     <Compile Include="Assets\Scripts\KeyPickUp.cs" />
+    <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
