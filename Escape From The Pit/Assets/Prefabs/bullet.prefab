@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114760197247667910}
   m_Layer: 0
   m_Name: bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b970e5e927a33c445b0f205e852043d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   destroyTime: 0.7
 --- !u!114 &114760197247667910
 MonoBehaviour:
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   damageTag: guard
+  bulletTag: bullet
 --- !u!212 &212031450683267154
 SpriteRenderer:
   m_ObjectHideFlags: 1

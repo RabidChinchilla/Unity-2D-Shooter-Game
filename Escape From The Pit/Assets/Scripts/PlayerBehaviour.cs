@@ -7,15 +7,23 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public delegate void UpdateHealth(int newHealth);
     public static event UpdateHealth OnUpdateHealth;
-
-    public int health = 100;
-
+    public int playerHealth;
+    public int startHealth = 100;
     private Animator gunAnim;
 
 	// Use this for initialization
 	void Start () {
         gunAnim = GetComponent<Animator>();
-
+        if (PlayerPrefs.HasKey("Health"))
+        {
+            playerHealth = PlayerPrefs.GetInt("Health");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Health", startHealth);
+            playerHealth = startHealth;
+        }
+        
         SendHealthData();
 	}
 	
@@ -35,11 +43,13 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        
+        playerHealth = PlayerPrefs.GetInt("Health") - damage;
+        PlayerPrefs.SetInt("Health", playerHealth);
 
         SendHealthData();
 
-        if (health <= 0)
+        if (playerHealth <= 0)
         {
             Die();
         }
@@ -54,7 +64,7 @@ public class PlayerBehaviour : MonoBehaviour {
     {
         if (OnUpdateHealth != null)
         {
-            OnUpdateHealth(health);
+            OnUpdateHealth(playerHealth);
         }
     }
 }

@@ -981,8 +981,19 @@ EdgeCollider2D:
   - {x: 7.792178, y: 3.769318}
   - {x: 6.5134764, y: 3.6652582}
   - {x: 6.525719, y: 2.3430862}
+  - {x: -11.555092, y: 2.3484535}
+  - {x: -11.538237, y: 1.3889303}
+  - {x: -13.490037, y: 1.4474041}
+  - {x: -13.705285, y: 1.3875879}
   - {x: -13.723878, y: 2.3312452}
   - {x: -13.727803, y: -2.8940175}
+  - {x: -13.693431, y: -1.932421}
+  - {x: -13.377161, y: -1.953501}
+  - {x: -13.177652, y: -1.777904}
+  - {x: -12.897671, y: -1.9564011}
+  - {x: -12.7958145, y: -2.2700112}
+  - {x: -12.800704, y: -2.528528}
+  - {x: -12.480481, y: -2.859308}
   - {x: 6.645769, y: -2.8543365}
   - {x: 6.6692104, y: -3.1789427}
   - {x: 14.727145, y: -3.2177005}
@@ -1139,7 +1150,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.37224266, g: 0.37331495, b: 0.375, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1324,6 +1335,11 @@ Prefab:
       propertyPath: theCamera
       value: 
       objectReference: {fileID: 968184125}
+    - target: {fileID: 114199696497777362, guid: ccd33d8c31890b04e950ef5ca4a4d05b,
+        type: 2}
+      propertyPath: startHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccd33d8c31890b04e950ef5ca4a4d05b, type: 2}
   m_IsPrefabParent: 0
@@ -1405,25 +1421,31 @@ GameObject:
   m_PrefabParentObject: {fileID: 1809907322474234, guid: 07279be7d1b3a3b458f42a30c71c8862,
     type: 2}
   m_PrefabInternal: {fileID: 1960831635}
---- !u!1 &1376118361 stripped
+--- !u!1 &1308583975 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1936257255101218, guid: 3a1723974bad88d48ad911a7e302934c,
+  m_PrefabParentObject: {fileID: 1737469762317064, guid: 97fd041b8890ef645b9a310830ca4986,
     type: 2}
-  m_PrefabInternal: {fileID: 153896809}
---- !u!114 &1376118371
-MonoBehaviour:
+  m_PrefabInternal: {fileID: 1092370146}
+--- !u!50 &1308583976
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1376118361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fce6096a626ae864a8bed73826ff8b3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageTime: 1
-  damage: 2
-  targetTag: Player
+  m_GameObject: {fileID: 1308583975}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 1
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1894487480
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,7 +51,6 @@ public class GuardBehaviour : MonoBehaviour {
                                                  transform.eulerAngles.z + adjustSplatterAngle);
 
             Instantiate(splatterPrefab, transform.position, newRot);
-            GetComponent<AddScore>().DoSendScore();
             Destroy(gameObject);
         }
     }

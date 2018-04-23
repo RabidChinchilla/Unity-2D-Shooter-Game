@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114012502819233074}
   - component: {fileID: 114285910380959532}
   - component: {fileID: 114478977289218638}
-  - component: {fileID: 114385690622008742}
+  - component: {fileID: 114816803228844038}
   m_Layer: 0
   m_Name: Guard
   m_TagString: guard
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  damage: 2
   splatterPrefab: {fileID: 1888436126081982, guid: 5603ac2c78efe4d428ac55cb2dbe6bdb,
     type: 2}
   adjustSplatterAngle: 270
@@ -154,18 +155,6 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
---- !u!114 &114385690622008742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1936257255101218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61dc0cefd0398ee4bbc9ce4d46f5dc70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 10
 --- !u!114 &114478977289218638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,6 +168,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &114816803228844038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936257255101218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce6096a626ae864a8bed73826ff8b3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTime: 1
+  damage: 2
+  targetTag: Player
 --- !u!212 &212432991100957816
 SpriteRenderer:
   m_ObjectHideFlags: 1

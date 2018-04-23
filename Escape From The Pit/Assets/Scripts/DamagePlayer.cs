@@ -9,8 +9,18 @@ public class DamagePlayer : MonoBehaviour {
     public string targetTag = "Player";
     float timeColliding;
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == targetTag)
+        {
+            if(!IsInvoking("ResetDamage"))
+            {
+                collision.gameObject.SendMessage("TakeDamage", damage);
+                GetComponent<Collider2D>().enabled = false;
+                Invoke("ResetDamage", 0.5f);
+            }
+        }
+        /*
         if (collision.gameObject.tag == targetTag)
         {
             if (timeColliding < damageTime)
@@ -23,5 +33,11 @@ public class DamagePlayer : MonoBehaviour {
                 timeColliding = 0.0f;
             }
         }
+        */
+    }
+
+    void ResetDamage()
+    {
+        GetComponent<Collider2D>().enabled = true;
     }
 }
