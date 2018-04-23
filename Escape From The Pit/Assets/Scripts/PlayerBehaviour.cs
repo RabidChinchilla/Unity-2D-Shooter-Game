@@ -14,7 +14,12 @@ public class PlayerBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gunAnim = GetComponent<Animator>();
-        if (PlayerPrefs.HasKey("Health"))
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayerPrefs.SetInt("Health", startHealth);
+            playerHealth = startHealth;
+        }
+        else if (PlayerPrefs.HasKey("Health"))
         {
             playerHealth = PlayerPrefs.GetInt("Health");
         }
