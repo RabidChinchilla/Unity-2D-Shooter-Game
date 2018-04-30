@@ -28,7 +28,6 @@ public class PlayerBehaviour : MonoBehaviour {
             PlayerPrefs.SetInt("Health", startHealth);
             playerHealth = startHealth;
         }
-        
         SendHealthData();
 	}
 	
@@ -44,6 +43,12 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             GetComponent<Animator>().SetBool("isFiring", false);
         }
+
+        if (playerHealth > 100)
+        {
+            playerHealth = 100;
+            SendHealthData();
+        }
 	}
 
     public void TakeDamage(int damage)
@@ -58,6 +63,12 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             Die();
         }
+    }
+
+    public void HealPlayer(int heal)
+    {
+        playerHealth = PlayerPrefs.GetInt("Health") + heal;
+        SendHealthData();
     }
 
     void Die()

@@ -418,6 +418,7 @@
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
     <Compile Include="Assets\Scripts\GuardBehaviour.cs" />
+    <Compile Include="Assets\Scripts\HealPlayer.cs" />
     <Compile Include="Assets\Scripts\KeyPickUp.cs" />
     <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
