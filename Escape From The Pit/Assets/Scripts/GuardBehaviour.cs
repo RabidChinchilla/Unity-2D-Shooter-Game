@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuardBehaviour : MonoBehaviour {
+public class GuardBehaviour : MonoBehaviour
+{
+    public delegate void onDeSpawn();
+    public static event onDeSpawn OnDeSpawn;
 
     public int health = 10;
     public int damage = 2;
@@ -50,7 +53,10 @@ public class GuardBehaviour : MonoBehaviour {
                                                  transform.eulerAngles.y,
                                                  transform.eulerAngles.z + adjustSplatterAngle);
 
+
             Instantiate(splatterPrefab, transform.position, newRot);
+
+            if (OnDeSpawn != null) OnDeSpawn();
             Destroy(gameObject);
         }
     }
