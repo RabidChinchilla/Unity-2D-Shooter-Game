@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PlayerBehaviour : MonoBehaviour {
 
@@ -10,6 +12,7 @@ public class PlayerBehaviour : MonoBehaviour {
     public int playerHealth;
     public int startHealth = 100;
     private Animator gunAnim;
+    public Slider healthBar;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +31,8 @@ public class PlayerBehaviour : MonoBehaviour {
             PlayerPrefs.SetInt("Health", startHealth);
             playerHealth = startHealth;
         }
+        healthBar.value = playerHealth;
+        //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
         SendHealthData();
 	}
 	
@@ -47,6 +52,8 @@ public class PlayerBehaviour : MonoBehaviour {
         if (playerHealth > 100)
         {
             playerHealth = 100;
+            //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
+            healthBar.value = playerHealth;
             SendHealthData();
         }
 	}
@@ -57,6 +64,8 @@ public class PlayerBehaviour : MonoBehaviour {
         playerHealth = PlayerPrefs.GetInt("Health") - damage;
         PlayerPrefs.SetInt("Health", playerHealth);
 
+        //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
+        healthBar.value = playerHealth;
         SendHealthData();
 
         if (playerHealth <= 0)
@@ -69,6 +78,7 @@ public class PlayerBehaviour : MonoBehaviour {
     {
         playerHealth = PlayerPrefs.GetInt("Health") + heal;
         SendHealthData();
+        //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
     }
 
     void Die()
@@ -78,6 +88,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     void SendHealthData()
     {
+        healthBar.value = playerHealth;
         if (OnUpdateHealth != null)
         {
             OnUpdateHealth(playerHealth);

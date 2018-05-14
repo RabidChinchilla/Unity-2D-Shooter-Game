@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 73
+  controlID: 11
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 74
+  controlID: 12
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -405,20 +405,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\bgearing\Documents\GitHub\AINT152---games-workshop\Escape
     From The Pit
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 962b0000
-    m_LastClickedID: 11158
-    m_ExpandedIDs: 000000009e280000e22a000000ca9a3bffffff7f
+    m_SelectedIDs: ba290000
+    m_LastClickedID: 10682
+    m_ExpandedIDs: 000000009e280000e42a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -446,7 +446,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e280000e22a0000
+    m_ExpandedIDs: 000000009e280000e42a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -473,8 +473,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000e0270000c22a00007a2b00003a2a0000000000003a6f0000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000e0270000c22a00007a2b00003a2a00003a6f000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 8a85ffff9efbffff00000000
+    m_ExpandedIDs: a2dcf6ff84ddf6ff2eeff6ff42c9f7ff54d0f7ff82d0f7ff4cf6f7ff90f6f7ffca80f9ffd680f9fffae9f9ff04eaf9fffaeaf9ff70ecf9ffc8eefbffd4eefbffe0eefbff124cfcff1c4cfcff2c4cfcfff84efcfffa9afcff049bfcff149bfcff409efcffc8c0fcffd2c0fcffe2c0fcff6ec4fcff76c4fcffc8cefcffd2cefcfff0cefcffdad6fcffe4d6fcffecd6fcfffe32fdff2c33fdffc60afeffd00afeffe00afeff8c13feff9613feff5015feff1420feff1e20fefffa21feffe0f7fefff6fdfefffae8ffff40f0ffff9efbffff000000006e2e0000fadb0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.339509, y: 10.60822, z: 1.3246003}
+    m_Target: {x: -15.372962, y: 35.067673, z: -5.6687937}
     speed: 2
-    m_Value: {x: -10.339509, y: 10.60822, z: 1.3246003}
+    m_Value: {x: -15.372962, y: 35.067673, z: -5.6687937}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -652,9 +652,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 103.85403
+    m_Target: 76.89519
     speed: 2
-    m_Value: 103.85403
+    m_Value: 76.89519
   m_Ortho:
     m_Target: 1
     speed: 2
