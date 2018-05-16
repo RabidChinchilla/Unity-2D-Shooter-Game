@@ -6,6 +6,7 @@ TagManager:
   tags:
   - guard
   - bullet
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -69,4 +70,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1044046081
+    locked: 0
+  - name: Weapon
+    uniqueID: 1020229211
     locked: 0
