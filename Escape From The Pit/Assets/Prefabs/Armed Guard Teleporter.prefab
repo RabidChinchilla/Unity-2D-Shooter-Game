@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1735054965738604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -48.004288, y: 38.08202, z: 0}
+  m_LocalPosition: {x: -0.9024377, y: 2.65059, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 1857791559136318, guid: 399a05de76fa1d944bf75956de9a1733,
     type: 2}
-  spawnCount: 3
+  spawnCount: 0
+  spawnLimit: 3
 --- !u!212 &212081618451998130
 SpriteRenderer:
   m_ObjectHideFlags: 1

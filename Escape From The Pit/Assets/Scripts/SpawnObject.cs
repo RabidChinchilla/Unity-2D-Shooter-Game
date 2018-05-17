@@ -7,7 +7,7 @@ public class SpawnObject : MonoBehaviour {
     public GameObject objectPrefab;
 
     public int spawnCount = 0;
-
+    public int spawnLimit = 15;
     void OnEnable()
     {
         GuardBehaviour.OnDeSpawn += DeSpawn;
@@ -15,7 +15,7 @@ public class SpawnObject : MonoBehaviour {
 
     void Spawn()
     {
-        if (spawnCount < 8)
+        if (spawnCount < spawnLimit)
         {
             spawnCount++;
             Instantiate(objectPrefab, transform.position, transform.rotation);
