@@ -16,7 +16,7 @@ public class RangedEnemyBehaviour : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public float fireSpeed = 0.0f;
-    public float nextAttack = 0.0f;
+    public int fireDelay = 0;
 
     void Start()
     {
@@ -38,7 +38,7 @@ public class RangedEnemyBehaviour : MonoBehaviour {
         }
         else
         {
-            if (Time.time > nextAttack)
+            if (fireDelay >= 100)
             {
                 Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
@@ -46,7 +46,13 @@ public class RangedEnemyBehaviour : MonoBehaviour {
                 {
                     GetComponent<AudioSource>().Play();
                 }
+                fireDelay = 0;
             }
+            else
+            {
+                fireDelay = fireDelay + 1;
+            }
+            
         }
     }
 
