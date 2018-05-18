@@ -179,7 +179,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -223,6 +223,7 @@ MonoBehaviour:
   playerHealth: 0
   startHealth: 100
   healthBar: {fileID: 0}
+  targetTag: Weapon
 --- !u!114 &114563675687752534
 MonoBehaviour:
   m_ObjectHideFlags: 1

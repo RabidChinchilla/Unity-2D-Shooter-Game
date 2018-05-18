@@ -22,6 +22,11 @@ public class GuardBehaviour : MonoBehaviour
 
             GetComponent<MoveTowardsObject>().target = player;
             GetComponent<SmoothLookAtTarget>().target = player;
+
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
     }
 

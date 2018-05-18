@@ -396,6 +396,7 @@
     <Compile Include="Assets\Scripts\AddScore.cs" />
     <Compile Include="Assets\Scripts\Bullet2D.cs" />
     <Compile Include="Assets\Scripts\BulletHit2D.cs" />
+    <Compile Include="Assets\Scripts\DamageFlash.cs" />
     <Compile Include="Assets\Scripts\DamagePlayer.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />

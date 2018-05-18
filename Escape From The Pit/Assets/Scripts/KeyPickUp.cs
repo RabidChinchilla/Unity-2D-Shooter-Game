@@ -10,6 +10,10 @@ public class KeyPickUp : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
             gameObject.SetActive(false);
             Destroy(Barrier);
         }

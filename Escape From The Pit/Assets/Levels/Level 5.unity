@@ -5344,6 +5344,7 @@ GameObject:
   - component: {fileID: 1259954802}
   - component: {fileID: 1259954801}
   - component: {fileID: 1259954803}
+  - component: {fileID: 1259954804}
   m_Layer: 12
   m_Name: Level 5 stage
   m_TagString: Untagged
@@ -5507,6 +5508,86 @@ EdgeCollider2D:
   - {x: 14.259234, y: 0.6982872}
   - {x: 16.783808, y: 0.69828606}
   - {x: 17.482096, y: 0.7161915}
+--- !u!82 &1259954804
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259954800}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f7ac3b26ead71014b83571f2349d7ae7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &1291268446
 Prefab:
   m_ObjectHideFlags: 0
@@ -6897,12 +6978,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 98
       objectReference: {fileID: 0}
-    - target: {fileID: 114735118723554928, guid: 399a05de76fa1d944bf75956de9a1733,
+    - target: {fileID: 114202729691413676, guid: 399a05de76fa1d944bf75956de9a1733,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 339526751}
-    - target: {fileID: 114202729691413676, guid: 399a05de76fa1d944bf75956de9a1733,
+    - target: {fileID: 114735118723554928, guid: 399a05de76fa1d944bf75956de9a1733,
         type: 2}
       propertyPath: target
       value: 

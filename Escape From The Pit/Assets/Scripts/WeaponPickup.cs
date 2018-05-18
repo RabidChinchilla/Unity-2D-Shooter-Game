@@ -14,6 +14,11 @@ public class WeaponPickup : MonoBehaviour
             if (collision.gameObject.tag == targetTag)
             {
                 Instantiate(newPlayer, transform.position, transform.rotation);
+
+                if (GetComponent<AudioSource>() != null)
+                {
+                    GetComponent<AudioSource>().Play();
+                }
             }
         }
     }

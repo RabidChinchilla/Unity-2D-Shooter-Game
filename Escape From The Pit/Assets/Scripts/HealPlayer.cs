@@ -11,8 +11,14 @@ public class HealPlayer : MonoBehaviour {
     {
         if (collision.gameObject.tag == targetTag)
         {
+
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
             collision.gameObject.SendMessage("HealPlayer", heal);
             Destroy(gameObject);
+
         }
     }
 }

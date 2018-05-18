@@ -14,6 +14,11 @@ public class TeleporterBehaviour : MonoBehaviour {
 
         if (health <= 0)
         {
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
+
             Quaternion newRot = Quaternion.Euler(transform.eulerAngles.x,
                                                  transform.eulerAngles.y,
                                                  transform.eulerAngles.z + adjustExplosionAngle);
