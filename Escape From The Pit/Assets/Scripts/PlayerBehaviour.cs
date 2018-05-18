@@ -64,6 +64,9 @@ public class PlayerBehaviour : MonoBehaviour {
         playerHealth = PlayerPrefs.GetInt("Health") - damage;
         PlayerPrefs.SetInt("Health", playerHealth);
 
+        GetComponent<SpriteRenderer>().color = Color.red;
+        StartCoroutine(whitecolor());
+
         //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
         healthBar.value = playerHealth;
         SendHealthData();
@@ -103,6 +106,12 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator whitecolor()
+    {
+        yield return new WaitForSeconds(1);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
 }

@@ -34,7 +34,7 @@ public class DamageFlash : MonoBehaviour
         sprite.material = flashMaterial;
 
         // set a timer to swap the material back to the original
-        Invoke("ResetDamageFlash", 0.05f);
+        Invoke("ResetDamageFlash", 5.05f);
     }
 
     // this method resets the material from the flash effect to the original material

@@ -59,6 +59,8 @@ public class RangedEnemyBehaviour : MonoBehaviour {
     public void TakeDamage(int damage)
     {
         health -= damage;
+        GetComponent<SpriteRenderer>().color = Color.red;
+        StartCoroutine(whitecolor());
 
         if (health <= 0)
         {
@@ -78,5 +80,11 @@ public class RangedEnemyBehaviour : MonoBehaviour {
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Rigidbody2D>().angularVelocity = 0.0f;
+    }
+
+    IEnumerator whitecolor()
+    {
+        yield return new WaitForSeconds(1);
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
