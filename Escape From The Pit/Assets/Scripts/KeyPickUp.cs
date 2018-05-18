@@ -8,7 +8,7 @@ public class KeyPickUp : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GameObject.FindWithTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
             gameObject.SetActive(false);
             Destroy(Barrier);
