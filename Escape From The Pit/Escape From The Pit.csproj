@@ -411,6 +411,7 @@
     <Compile Include="Assets\Scripts\PlayerChange.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\RangedEnemyBehaviour.cs" />
+    <Compile Include="Assets\Scripts\RestartGame.cs" />
     <Compile Include="Assets\Scripts\ShootBullet.cs" />
     <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
     <Compile Include="Assets\Scripts\SmoothLookAtTarget.cs" />
