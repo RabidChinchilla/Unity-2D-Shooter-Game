@@ -31,14 +31,8 @@ public class RangedEnemyBehaviour : MonoBehaviour {
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, player.position) > AttackDistance)
-        {
-            GetComponent<MoveTowardsObject>().target = player;
-            GetComponent<SmoothLookAtTarget>().target = player;
-        }
-        else
-        {
-            if (fireDelay >= 100)
+        
+            if (fireDelay >= 50)
             {
                 Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
@@ -53,7 +47,7 @@ public class RangedEnemyBehaviour : MonoBehaviour {
                 fireDelay = fireDelay + 1;
             }
             
-        }
+        
     }
 
     public void TakeDamage(int damage)
