@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LevelChange : MonoBehaviour {
 
-	void OnCollisionEnter2D(Collision2D other)
+    public string targetTag = "Player";
+
+    void OnCollisionEnter2D(Collision2D other)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (other.gameObject.tag == targetTag)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

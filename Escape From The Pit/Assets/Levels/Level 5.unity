@@ -2786,6 +2786,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1108960414269400, guid: f9cdba872a2d7a343bcc2c1db0398a95,
         type: 2}
+    - target: {fileID: 114768395663277100, guid: a2b40dc967a2cf44cb7d8e38e2b8aa64,
+        type: 2}
+      propertyPath: spawnTime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114892954547938574, guid: a2b40dc967a2cf44cb7d8e38e2b8aa64,
+        type: 2}
+      propertyPath: spawnLimit
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2b40dc967a2cf44cb7d8e38e2b8aa64, type: 2}
   m_IsPrefabParent: 0

@@ -145,7 +145,7 @@ afc4d393ee161fd77de20d7dd16116cc Assembly-CSharp.dll:.DamageFlash
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 26f3192c64d6b4dcba4cb39a614a39d8 Assembly-CSharp.dll:Pathfinding.Examples.AstarSmoothFollow2
 c78288abd7c4d2c374e4a22a11159b26 Assembly-CSharp.dll:Pathfinding.SimpleSmoothModifier
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LevelChange
+e53f185a6d4af10a86ac45be336072ca Assembly-CSharp.dll:.LevelChange
 da15334aa9b6ddbb04a29dd8cbd735c3 Assembly-CSharp.dll:Pathfinding.AlternativePath
 c0267ff6dde121242326308b4f206c2d Assembly-CSharp.dll:.KeyPickUp
 2757da0fd65344f7b6b175ed395f8b81 Assembly-CSharp.dll:Pathfinding.AIDestinationSetter
