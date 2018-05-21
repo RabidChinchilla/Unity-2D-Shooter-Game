@@ -945,6 +945,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224901438623828228, guid: 76b866c6de773af4e9931c9dc4ee9b6d,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76b866c6de773af4e9931c9dc4ee9b6d, type: 2}
   m_IsPrefabParent: 0
@@ -1269,6 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0284475842f6a7649b7d2e9942c8dec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: Player
 --- !u!61 &964651595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1840,7 +1846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4626667766667504, guid: 07279be7d1b3a3b458f42a30c71c8862, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.423
+      value: 0.414
       objectReference: {fileID: 0}
     - target: {fileID: 4626667766667504, guid: 07279be7d1b3a3b458f42a30c71c8862, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1865,6 +1871,10 @@ Prefab:
     - target: {fileID: 4626667766667504, guid: 07279be7d1b3a3b458f42a30c71c8862, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4626667766667504, guid: 07279be7d1b3a3b458f42a30c71c8862, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.72957957
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07279be7d1b3a3b458f42a30c71c8862, type: 2}

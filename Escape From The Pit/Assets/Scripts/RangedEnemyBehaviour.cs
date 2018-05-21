@@ -12,11 +12,12 @@ public class RangedEnemyBehaviour : MonoBehaviour {
     public float adjustSplatterAngle = 0.0f;
     public float AttackDistance = 2.0f;
     private Transform player;
-
+    public int soundDelay = 0;
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public float fireSpeed = 0.0f;
     public int fireDelay = 0;
+    public float distance = 0.0f;
 
     void Start()
     {
@@ -31,23 +32,31 @@ public class RangedEnemyBehaviour : MonoBehaviour {
 
     void Update()
     {
-        
-            if (fireDelay >= 50)
-            {
-                Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        if (fireDelay >= 50)
+        {
+            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
-                if (GetComponent<AudioSource>() != null)
-                {
-                    GetComponent<AudioSource>().Play();
-                }
-                fireDelay = 0;
-            }
-            else
+            if (GetComponent<AudioSource>() != null)
             {
-                fireDelay = fireDelay + 1;
+                GetComponent<AudioSource>().Play();
             }
-            
-        
+            fireDelay = 0;
+        }
+        else
+        {
+            fireDelay = fireDelay + 1;
+        }
+
+        distance = Vector2.Distance(player.transform.position, gameObject.transform.position);
+
+        if (distance == 50)
+        {
+            if (GetComponent<AudioSource>() != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
+        }
+
     }
 
     public void TakeDamage(int damage)

@@ -1049,6 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0284475842f6a7649b7d2e9942c8dec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: Player
 --- !u!60 &915835755
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1386,12 +1387,12 @@ Prefab:
     - target: {fileID: 224945096543562302, guid: 76b866c6de773af4e9931c9dc4ee9b6d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 229.4
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 224945096543562302, guid: 76b866c6de773af4e9931c9dc4ee9b6d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -420.9
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 1984363317471338, guid: 76b866c6de773af4e9931c9dc4ee9b6d, type: 2}
       propertyPath: m_TagString

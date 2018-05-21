@@ -11,9 +11,9 @@ public class GuardBehaviour : MonoBehaviour
     public int damage = 2;
     public GameObject splatterPrefab;
     public float adjustSplatterAngle = 0.0f;
-
+    public int soundDelay = 0;
     private Transform player;
-
+    public float distance = 0.0f;
     void Start()
     {
         if (GameObject.FindWithTag("Player"))
@@ -23,16 +23,23 @@ public class GuardBehaviour : MonoBehaviour
             GetComponent<MoveTowardsObject>().target = player;
             GetComponent<SmoothLookAtTarget>().target = player;
 
+        }
+    }
+    private void Update()
+    {
+        distance = Vector2.Distance(player.transform.position, gameObject.transform.position);
+
+        if (distance == 50)
+        {
             if (GetComponent<AudioSource>() != null)
             {
                 GetComponent<AudioSource>().Play();
             }
         }
     }
-
     //void OnCollisionenter2D(Collision2D other)
     //{
-   //     if (other.gameObject.CompareTag("Player"))
+    //     if (other.gameObject.CompareTag("Player"))
     //    {
     //        if (other.gameObject.CompareTag("Player"))
     //        {

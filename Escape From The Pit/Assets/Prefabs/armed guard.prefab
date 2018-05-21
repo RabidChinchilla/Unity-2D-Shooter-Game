@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 50052512715815742}
   - component: {fileID: 58617600705964066}
   - component: {fileID: 114461747167340988}
-  - component: {fileID: 82245888726410248}
   - component: {fileID: 114565202928154436}
   - component: {fileID: 114909985356986322}
   - component: {fileID: 114641020619553652}
@@ -111,86 +110,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.3}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!82 &82245888726410248
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1857791559136318}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: edd9d2c8ba7c2cf4995bdded5a1c762f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &114461747167340988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,11 +126,13 @@ MonoBehaviour:
     type: 2}
   adjustSplatterAngle: 0
   AttackDistance: 10
+  soundDelay: 0
   bulletPrefab: {fileID: 1078527953983470, guid: 08c7ce6d3ffbc2c4aa414d64119e8386,
     type: 2}
   bulletSpawn: {fileID: 4587706326855276}
   fireSpeed: 10
   fireDelay: 0
+  distance: 0
 --- !u!114 &114565202928154436
 MonoBehaviour:
   m_ObjectHideFlags: 1
