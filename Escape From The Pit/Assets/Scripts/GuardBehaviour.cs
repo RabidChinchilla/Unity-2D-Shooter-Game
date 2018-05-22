@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GuardBehaviour : MonoBehaviour
 {
+    //used in the despawing for the spawners so they lower the spawn count
     public delegate void onDeSpawn();
     public static event onDeSpawn OnDeSpawn;
 
@@ -14,10 +15,12 @@ public class GuardBehaviour : MonoBehaviour
     public int soundDelay = 0;
     private Transform player;
     public float distance = 0.0f;
+
     void Start()
     {
         if (GameObject.FindWithTag("Player"))
         {
+            //find the object with the player tag and move towards it
             player = GameObject.FindWithTag("Player").transform;
 
             GetComponent<MoveTowardsObject>().target = player;
@@ -28,7 +31,7 @@ public class GuardBehaviour : MonoBehaviour
     private void Update()
     {
         distance = Vector2.Distance(player.transform.position, gameObject.transform.position);
-
+        //get the distance between the player and if it's 50 play the audio source on the object
         if (distance == 50)
         {
             if (GetComponent<AudioSource>() != null)
@@ -58,9 +61,13 @@ public class GuardBehaviour : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        //change the colour to red so to give the affect of a damage flash
         GetComponent<SpriteRenderer>().color = Color.red;
+        //reset colour to white
         StartCoroutine(whitecolor());
 
+        //take damage when the takedamage message is recieved
+        //if the health gets to 0 destroy the game object
         if (health <= 0)
         {
             Quaternion newRot = Quaternion.Euler(transform.eulerAngles.x,
@@ -77,6 +84,7 @@ public class GuardBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
+        //add velocity to the game object so it can move
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Rigidbody2D>().angularVelocity = 0.0f;
     }

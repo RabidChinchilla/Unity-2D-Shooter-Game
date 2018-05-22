@@ -9,6 +9,7 @@ public class MouseSmoothLook2D : MonoBehaviour {
     public float adjustmentAngle = 0.0f;
 
 	void Update () {
+        //get the position of the mouse and rotate the player to look at it
         Vector3 target = theCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 difference = target - transform.position;
 

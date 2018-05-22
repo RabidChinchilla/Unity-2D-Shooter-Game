@@ -607,10 +607,10 @@ MonoBehaviour:
   m_Text: "After being sent to prison for a series of mass murders he definitely committed
     Josh Smith has only served three years of his life sentence.\n\nBut suddenly a
     golden opportunity to escape is presented to him as the organisation True justice
-    made a mistake and opened his cell instead of the cell next to him which housed
-    John Smith, a man who had been wrongly sent to prison for a crime he didn\u2019t
-    commit.\n\nNow with the perfect opportunity to escape Josh will fight his way
-    out of this pit of a prison. "
+    made a mistake and opened his cell and gave him a gun instead of the cell next
+    to him which housed John Smith, a man who had been wrongly sent to prison for
+    a crime he didn\u2019t commit.\n\nNow with the perfect opportunity to escape Josh
+    will fight his way out of this pit of a prison. "
 --- !u!222 &1775887752
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -12,11 +12,13 @@ public class Bullet2D : MonoBehaviour {
         Invoke("Die", destroyTime);
 	}
 
+    //when invoked will remove the game object from instance of the game
     void Die()
     {
         Destroy(gameObject);
     }
 
+    //when called will invoke the die function
     void OnDestroy()
     {
         CancelInvoke("Die");

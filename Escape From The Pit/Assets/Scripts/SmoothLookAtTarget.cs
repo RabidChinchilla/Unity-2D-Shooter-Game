@@ -12,6 +12,7 @@ public class SmoothLookAtTarget : MonoBehaviour {
     {
         if (target != null)
         {
+            //have the object face the target
             Vector3 difference = target.position - transform.position;
 
             difference.Normalize();

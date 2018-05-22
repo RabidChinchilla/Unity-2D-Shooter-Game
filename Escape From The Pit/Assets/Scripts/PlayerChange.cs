@@ -11,6 +11,7 @@ public class PlayerChange : MonoBehaviour {
     {
         if (collision.gameObject.tag == targetTag)
         {
+            //when colliding with the player create and deploy the new player model
             Instantiate(newPlayer, transform.position, transform.rotation);
             Destroy(gameObject);
         }

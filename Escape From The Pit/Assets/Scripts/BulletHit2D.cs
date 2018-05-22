@@ -8,10 +8,13 @@ public class BulletHit2D : MonoBehaviour {
     public string damageTag = "";
     void OnTriggerEnter2D(Collider2D other)
     {
-            if (other.CompareTag(damageTag))
-            {
-                other.SendMessage("TakeDamage", damage);
-            }
-            Destroy(gameObject);
+        //compares the tag of the object that has collied with the bullet
+        if (other.CompareTag(damageTag))
+        {
+            //if the tags match send the take damage message to the object and if it has a take damage     
+            other.SendMessage("TakeDamage", damage);
+        }
+        //removes the bullet once it has collided with an object
+        Destroy(gameObject);
     }
 }

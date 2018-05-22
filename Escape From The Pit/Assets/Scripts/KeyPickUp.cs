@@ -14,6 +14,7 @@ public class KeyPickUp : MonoBehaviour {
             {
                 GetComponent<AudioSource>().Play();
             }
+            //when colliding with the player remove the barrier from the level that is attached to the key
             gameObject.SetActive(false);
             Destroy(Barrier);
         }

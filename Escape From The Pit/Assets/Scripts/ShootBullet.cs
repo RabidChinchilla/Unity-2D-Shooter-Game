@@ -17,6 +17,7 @@ public class ShootBullet : MonoBehaviour {
 
     void Fire()
     {
+        //when is firing is true create a bullet and send it out of the spawn point
         isFiring = true;
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 

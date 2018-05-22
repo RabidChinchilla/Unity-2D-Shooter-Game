@@ -8,11 +8,13 @@ public class SpawnObjectTimer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //spawn one at the start
         Invoke("DoSpawn", spawnTime);
 	}
 	
 	
 	void DoSpawn () {
+        //spawn when the time reaches its limit
         SendMessage("Spawn");
         Invoke("DoSpawn", spawnTime);
 	}

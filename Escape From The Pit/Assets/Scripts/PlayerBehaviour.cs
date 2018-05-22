@@ -17,6 +17,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gunAnim = GetComponent<Animator>();
+        //if the scene is scene 1 the player is automatically given full health
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             PlayerPrefs.SetInt("Health", startHealth);
@@ -24,6 +25,7 @@ public class PlayerBehaviour : MonoBehaviour {
         }
         else if (PlayerPrefs.HasKey("Health"))
         {
+            //if it isn't level 1 the player is given their health from the player prefs carried over from the previous level
             playerHealth = PlayerPrefs.GetInt("Health");
         }
         else
@@ -40,17 +42,21 @@ public class PlayerBehaviour : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown(0))
         {
+            //when the player is clicking play the audio source linked to it
             GetComponent<AudioSource>().Play();
+            //when the player is clicking set isfiring to true so the animation will play
             GetComponent<Animator>().SetBool("isFiring", true);
         }
 
         if (Input.GetMouseButtonUp(0))
         {
+            //set isfiring to false so the animation stops
             GetComponent<Animator>().SetBool("isFiring", false);
         }
 
         if (playerHealth > 100)
         {
+            //if the player health exceeds 100 bring it back down to the maximum
             playerHealth = 100;
             //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
             healthBar.value = playerHealth;
@@ -60,7 +66,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
-        
+        //when the player takes damage lower health and update the player prefs
         playerHealth = PlayerPrefs.GetInt("Health") - damage;
         PlayerPrefs.SetInt("Health", playerHealth);
 
@@ -68,17 +74,20 @@ public class PlayerBehaviour : MonoBehaviour {
         StartCoroutine(whitecolor());
 
         //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
+        //adjust the size of the health bar to keep in time with the player losing health
         healthBar.value = playerHealth;
         SendHealthData();
 
         if (playerHealth <= 0)
         {
+            //when the player loses all health invoke the die function
             Die();
         }
     }
 
     public void HealPlayer(int heal)
     {
+        //when called heal the player by adding to the health player prefrence
         playerHealth = PlayerPrefs.GetInt("Health") + heal;
         SendHealthData();
         //healthBar.sizeDelta = new Vector2(playerHealth, healthBar.sizeDelta.y);
@@ -86,11 +95,13 @@ public class PlayerBehaviour : MonoBehaviour {
 
     void Die()
     {
+        //when invoked move to the game over screen
         SceneManager.LoadScene("Game Over");
     }
 
     void SendHealthData()
     {
+        //update the player health 
         healthBar.value = playerHealth;
         if (OnUpdateHealth != null)
         {
@@ -102,6 +113,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //when colliding with the new weapon destroy the current player
         if (collision.gameObject.tag == targetTag)
         {
             Destroy(gameObject);

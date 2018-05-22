@@ -15,7 +15,9 @@ public class DamagePlayer : MonoBehaviour {
         {
             if(!IsInvoking("ResetDamage"))
             {
+                //if the object is colliding with the player send a take damage message
                 collision.gameObject.SendMessage("TakeDamage", damage);
+                //after the damage has been taken disable the collider and the invoke the reset to put it back
                 GetComponent<Collider2D>().enabled = false;
                 Invoke("ResetDamage", 0.5f);
             }

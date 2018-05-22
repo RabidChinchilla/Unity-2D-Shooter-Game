@@ -11,6 +11,7 @@ public class LevelChange : MonoBehaviour {
     {
         if (other.gameObject.tag == targetTag)
         {
+            //when the player collides with the object trasport them to the next level
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

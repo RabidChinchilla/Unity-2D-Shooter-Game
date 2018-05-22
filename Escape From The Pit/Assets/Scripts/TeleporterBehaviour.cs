@@ -10,6 +10,7 @@ public class TeleporterBehaviour : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+        //when the teleporter takes damage lower it's health
         health -= damage;
 
         if (health <= 0)
@@ -22,7 +23,7 @@ public class TeleporterBehaviour : MonoBehaviour {
             Quaternion newRot = Quaternion.Euler(transform.eulerAngles.x,
                                                  transform.eulerAngles.y,
                                                  transform.eulerAngles.z + adjustExplosionAngle);
-
+            //when out of health destroy the object
             Instantiate(explosionPrefab, transform.position, newRot);
             Destroy(gameObject);
         }

@@ -6,6 +6,7 @@ public class QuitOnClick : MonoBehaviour {
 
     public void Quit()
     {
+        //close down the game when called
         Application.Quit();
     }
 }

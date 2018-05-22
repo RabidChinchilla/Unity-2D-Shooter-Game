@@ -17,6 +17,7 @@ public class SpawnObject : MonoBehaviour {
     {
         if (spawnCount < spawnLimit)
         {
+            //when an enemy spawns increase the spawn count and place them at the location
             spawnCount++;
             Instantiate(objectPrefab, transform.position, transform.rotation);
         }
@@ -32,6 +33,7 @@ public class SpawnObject : MonoBehaviour {
 
     void DeSpawn()
     {
+        //when called lower the spawn count
         spawnCount--;
     }
 }

@@ -7,6 +7,7 @@ public class PlayButton : MonoBehaviour {
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene("Zombie Shooter Level 1");
+        //Load a specific level by name
+        SceneManager.LoadScene("Level 1");
     }
 }

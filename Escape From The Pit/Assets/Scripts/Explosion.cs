@@ -8,6 +8,7 @@ public class Explosion : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        //invoke the destroy function after a set time
         Invoke("Die", destroyTime);
 	}
 	

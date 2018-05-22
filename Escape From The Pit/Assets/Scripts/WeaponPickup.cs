@@ -13,6 +13,7 @@ public class WeaponPickup : MonoBehaviour
         {
             if (collision.gameObject.tag == targetTag)
             {
+                //when player collides with object create the new game object
                 Instantiate(newPlayer, transform.position, transform.rotation);
 
                 if (GetComponent<AudioSource>() != null)

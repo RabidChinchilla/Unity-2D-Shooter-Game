@@ -23,6 +23,7 @@ public class RangedEnemyBehaviour : MonoBehaviour {
     {
         if (GameObject.FindWithTag("Player"))
         {
+            //find the player and move towards them
             player = GameObject.FindWithTag("Player").transform;
 
             GetComponent<MoveTowardsObject>().target = player;
@@ -34,6 +35,7 @@ public class RangedEnemyBehaviour : MonoBehaviour {
     {
         if (fireDelay >= 50)
         {
+            //if the fire delay is more than the limit fire a bullet and then reset the delay
             Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
 
             if (GetComponent<AudioSource>() != null)
@@ -51,6 +53,7 @@ public class RangedEnemyBehaviour : MonoBehaviour {
 
         if (distance == 50)
         {
+            //play audio source at a certain distance
             if (GetComponent<AudioSource>() != null)
             {
                 GetComponent<AudioSource>().Play();
@@ -61,10 +64,12 @@ public class RangedEnemyBehaviour : MonoBehaviour {
 
     public void TakeDamage(int damage)
     {
+        //remove health relating to the damage and flash red
         health -= damage;
         GetComponent<SpriteRenderer>().color = Color.red;
         StartCoroutine(whitecolor());
 
+        //if health is 0 destroy the game object
         if (health <= 0)
         {
             Quaternion newRot = Quaternion.Euler(transform.eulerAngles.x,
